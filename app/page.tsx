@@ -1,9 +1,10 @@
-import BulletedParagraph from "./section";
 import SectionsContainer from "./sections-container";
+import BulletedParagraph from "./bulleted-paragraph";
+import Image from "next/image";
 
 export default function Home() {
   return (
-    <div className="flex flex-col gap-y-10 w-fit items-center justify-center align-middle">
+    <div className="flex flex-col gap-y-24 w-fit items-center justify-center align-middle">
       <SectionsContainer heading="current" id="current">
         <BulletedParagraph title="contract swe @ a coaching platform">
           <ul>
@@ -28,9 +29,15 @@ export default function Home() {
             </li>
           </ul>
         </BulletedParagraph>
-        <BulletedParagraph title="leetcode doom">
+      </SectionsContainer>
+
+      <SectionsContainer heading="accomplishments" id="accomplishments">
+        <BulletedParagraph title="wasted 1k hours award @ leetcode">
           <ul>
-            <li>sunk 1k hours of my life to solve over 666 problems atp</li>
+            <li>
+              sunk 1k hours of my life to solve over 680 problems and
+              counting...
+            </li>
             <li>
               <a
                 href="https://leetcode.com/u/supahsilly12345/"
@@ -42,13 +49,10 @@ export default function Home() {
             </li>
           </ul>
         </BulletedParagraph>
-      </SectionsContainer>
-
-      <SectionsContainer heading="accomplishments" id="accomplishments">
         <BulletedParagraph title="1st place @ la hacks">
           <ul>
             <li>
-              won 2.5k for ai track, 2k competitors, debugged a lot of cursor
+              won $2.5k for ai track, 2k competitors, debugged a lot of cursor
               code
             </li>
           </ul>
@@ -73,11 +77,20 @@ export default function Home() {
       </SectionsContainer>
 
       <SectionsContainer heading="life outside of tech" id="awesome">
-        <BulletedParagraph title="awesome">
-          <ul>
-            <li>i love my corne</li>
-            <li>my 1992 miata!</li>
-          </ul>
+        <BulletedParagraph title="my 1992 miata!">
+          <Image src="/miat.jpg" alt="my 1992 miata" width={300} height={200} />
+        </BulletedParagraph>
+
+        <BulletedParagraph title="my mouseless corne setup">
+          <Image
+            src="/corne.jpg"
+            alt="corne keyboard"
+            width={300}
+            height={200}
+          />
+        </BulletedParagraph>
+        <BulletedParagraph title="more ducks">
+          <Image src="/duckies.jpg" alt="duckies" width={300} height={200} />
         </BulletedParagraph>
       </SectionsContainer>
     </div>

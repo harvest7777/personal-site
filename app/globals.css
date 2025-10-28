@@ -23,7 +23,7 @@ ul {
 }
 
 h1 {
-  @apply font-bold;
+  @apply text-xl font-bold;
 }
 
 h2 {
@@ -40,6 +40,5 @@ ul li::before {
   content: "-";
   position: absolute;
   left: 0;
-  color: var(--foreground);
   font-weight: bold;
 }

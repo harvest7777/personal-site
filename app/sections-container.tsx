@@ -9,9 +9,9 @@ export default function SectionsContainer({
 }) {
   return (
     <section id={id} className="w-full scroll-mt-24">
-      <h1 className="text-xl font-bold w-full text-left">{heading}</h1>
-      <div className="w-full h-px bg-foreground my-2"></div>
-      {children}
+      <h1 className=" w-full text-left">{heading}</h1>
+      <div className="w-full h-px bg-foreground/20 my-2"></div>
+      <div className="flex flex-col gap-y-4">{children}</div>
     </section>
   );
 }

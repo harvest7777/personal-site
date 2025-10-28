@@ -1,16 +1,29 @@
+"use client";
 import Link from "next/link";
+import { useState } from "react";
 
 export default function Tabs() {
+  const [open, setOpen] = useState(false);
+
   return (
     <div className="p-6 px-8 w-full flex gap-2 sticky top-0 left-0 h-16 justify-between bg-background z-30 items-center align-middle">
       <div>ryan&apos;s site</div>
-
-      <div className="w-fit flex gap-10">
+      {/* Hamburger menu button for small screens */}
+      <button
+        className="sm:hidden text-2xl font-mono px-2 py-1"
+        aria-label="Toggle menu"
+        onClick={() => setOpen((v) => !v)}
+        type="button"
+      >
+        =
+      </button>
+      {/* Nav links: hide on small screens */}
+      <div className="w-fit flex gap-10 sm:flex hidden">
         <Link
           href="/#awesome"
-          className=" text-red-400 h-full flex items-center font-extrabold   underline"
+          className="text-red-400 h-full flex items-center font-extrabold underline text-lg"
         >
-          ACTUAL INTERESTING THINGS
+          {"---> ACTUAL INTERESTING THINGS"}
         </Link>
         <Link href="/#current" className="h-full flex items-center underline">
           current
@@ -23,6 +36,32 @@ export default function Tabs() {
           accomplishments
         </Link>
       </div>
+      {/* Dropdown nav links for hamburger, only appear if open */}
+      {open && (
+        <div className="flex flex-col absolute top-16 right-8 bg-background border border-foreground/10 rounded-md w-52 shadow-lg p-4 gap-4 sm:hidden z-40">
+          <Link
+            href="/#awesome"
+            className="text-red-400 font-extrabold underline text-lg"
+            onClick={() => setOpen(false)}
+          >
+            {"---> ACTUAL INTERESTING THINGS"}
+          </Link>
+          <Link
+            href="/#current"
+            className="underline"
+            onClick={() => setOpen(false)}
+          >
+            current
+          </Link>
+          <Link
+            href="/#accomplishments"
+            className="underline"
+            onClick={() => setOpen(false)}
+          >
+            accomplishments
+          </Link>
+        </div>
+      )}
     </div>
   );
 }
