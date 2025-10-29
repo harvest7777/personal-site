@@ -22,6 +22,9 @@ html,
 body {
   margin: 0;
   padding-bottom: env(safe-area-inset-bottom);
+  white-space: normal;
+  overflow-wrap: anywhere;
+  word-break: break-word;
 }
 
 ul {
