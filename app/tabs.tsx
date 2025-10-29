@@ -23,7 +23,7 @@ export default function Tabs() {
           href="/#awesome"
           className="text-red-400 h-full flex items-center font-extrabold underline text-lg"
         >
-          {"---> ACTUAL INTERESTING THINGS"}
+          {"ACTUAL INTERESTING THINGS"}
         </Link>
         <Link href="/#current" className="h-full flex items-center underline">
           current
@@ -47,7 +47,7 @@ export default function Tabs() {
             className="text-red-400 font-extrabold underline"
             onClick={() => setOpen(false)}
           >
-            {"---> ACTUAL INTERESTING THINGS"}
+            {"ACTUAL INTERESTING THINGS"}
           </Link>
           <Link
             href="/#current"

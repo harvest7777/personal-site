@@ -21,10 +21,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistMono.variable} antialiased flex flex-col items-center justify-center overflow-auto mb-96`}
+        className={`${geistMono.variable} antialiased flex flex-col items-center justify-center overflow-y-auto mb-96`}
       >
         <Tabs></Tabs>
-        <main className="p-4 w-full max-w-screen-md">{children}</main>
+        <main className="p-4 w-full max-w-3xl">{children}</main>
       </body>
     </html>
   );
