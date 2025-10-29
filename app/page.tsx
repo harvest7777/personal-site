@@ -29,6 +29,12 @@ export default function Home() {
             </li>
           </ul>
         </BulletedParagraph>
+
+        <BulletedParagraph title="student @ csulb">
+          <ul>
+            <li>cs, expected may 2027</li>
+          </ul>
+        </BulletedParagraph>
       </SectionsContainer>
 
       <SectionsContainer heading="accomplishments" id="accomplishments">
