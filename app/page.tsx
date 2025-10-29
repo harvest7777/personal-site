@@ -4,7 +4,7 @@ import Image from "next/image";
 
 export default function Home() {
   return (
-    <div className="flex flex-col gap-y-24 w-fit items-center justify-center align-middle">
+    <div className="flex flex-col gap-y-24 w-full items-center justify-center align-middle">
       <SectionsContainer heading="current" id="current">
         <BulletedParagraph title="contract swe @ a coaching platform">
           <ul>

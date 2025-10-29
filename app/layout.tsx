@@ -24,7 +24,7 @@ export default function RootLayout({
         className={`${geistMono.variable} antialiased flex flex-col items-center justify-center overflow-auto mb-96`}
       >
         <Tabs></Tabs>
-        <main className="p-4">{children}</main>
+        <main className="p-4 w-full max-w-screen-md">{children}</main>
       </body>
     </html>
   );
