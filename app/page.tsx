@@ -78,6 +78,7 @@ export default function Home() {
       <SectionsContainer heading="connect" id="connect">
         <BulletedParagraph title="">
           <ul>
+            <li>@bagillionaire on discord</li>
             <li>
               <a
                 href="https://www.linkedin.com/in/wisp/"
@@ -87,7 +88,15 @@ export default function Home() {
                 https://www.linkedin.com/in/wisp/
               </a>
             </li>
-            <li>@bagillionaire on discord</li>
+            <li>
+              <a
+                href="https://github.com/harvest7777"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                https://github.com/harvest7777
+              </a>
+            </li>
           </ul>
         </BulletedParagraph>
       </SectionsContainer>
