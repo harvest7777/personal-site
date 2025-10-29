@@ -25,7 +25,7 @@ export default function Home() {
               mentoring at all the hackathons (most notable was cal hacks)
             </li>
             <li>
-              making agents using modern ai stack langgraph, chromadb, supabase
+              making agents with modern ai stack langgraph, chromadb, supabase
             </li>
           </ul>
         </BulletedParagraph>
