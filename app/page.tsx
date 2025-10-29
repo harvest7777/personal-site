@@ -75,7 +75,22 @@ export default function Home() {
           </ul>
         </BulletedParagraph>
       </SectionsContainer>
-
+      <SectionsContainer heading="connect" id="connect">
+        <BulletedParagraph title="">
+          <ul>
+            <li>
+              <a
+                href="https://www.linkedin.com/in/wisp/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                https://www.linkedin.com/in/wisp/
+              </a>
+            </li>
+            <li>@bagillionaire on discord</li>
+          </ul>
+        </BulletedParagraph>
+      </SectionsContainer>
       <SectionsContainer heading="life outside of tech" id="awesome">
         <BulletedParagraph title="my 1992 miata!">
           <Image src="/miat.jpg" alt="my 1992 miata" width={300} height={200} />

@@ -6,11 +6,11 @@ export default function Tabs() {
   const [open, setOpen] = useState(false);
 
   return (
-    <div className="p-6 px-8 w-full flex gap-2 sticky top-0 left-0 h-16 justify-between bg-background z-30 items-center align-middle">
+    <div className="md:p-6 md:px-8 p-4 px-4 w-full flex gap-2 sticky top-0 left-0 h-16 justify-between bg-background z-30 items-center align-middle">
       <div>ryan&apos;s site</div>
       {/* Hamburger menu button for small screens */}
       <button
-        className="sm:hidden text-2xl font-mono px-2 py-1"
+        className="md:hidden text-2xl font-mono px-2 py-1 h-full flex items-center"
         aria-label="Toggle menu"
         onClick={() => setOpen((v) => !v)}
         type="button"
@@ -18,7 +18,7 @@ export default function Tabs() {
         =
       </button>
       {/* Nav links: hide on small screens */}
-      <div className="w-fit flex gap-10 sm:flex hidden">
+      <div className="w-fit gap-10 md:flex hidden">
         <Link
           href="/#awesome"
           className="text-red-400 h-full flex items-center font-extrabold underline text-lg"
@@ -29,6 +29,9 @@ export default function Tabs() {
           current
         </Link>
 
+        <Link href="/#connect" className="h-full flex items-center underline">
+          connect
+        </Link>
         <Link
           href="/#accomplishments"
           className="h-full flex items-center underline"
@@ -38,10 +41,10 @@ export default function Tabs() {
       </div>
       {/* Dropdown nav links for hamburger, only appear if open */}
       {open && (
-        <div className="flex flex-col absolute top-16 right-8 bg-background border border-foreground/10 rounded-md w-52 shadow-lg p-4 gap-4 sm:hidden z-40">
+        <div className="flex flex-col absolute top-16 right-8 bg-background border border-foreground/10 rounded-md w-80 shadow-lg p-4 gap-4 md:hidden z-40">
           <Link
             href="/#awesome"
-            className="text-red-400 font-extrabold underline text-lg"
+            className="text-red-400 font-extrabold underline"
             onClick={() => setOpen(false)}
           >
             {"---> ACTUAL INTERESTING THINGS"}
@@ -59,6 +62,13 @@ export default function Tabs() {
             onClick={() => setOpen(false)}
           >
             accomplishments
+          </Link>
+          <Link
+            href="/#connect"
+            className="underline"
+            onClick={() => setOpen(false)}
+          >
+            connect
           </Link>
         </div>
       )}
