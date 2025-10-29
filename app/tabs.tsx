@@ -41,7 +41,7 @@ export default function Tabs() {
       </div>
       {/* Dropdown nav links for hamburger, only appear if open */}
       {open && (
-        <div className="flex flex-col absolute top-16 right-8 bg-background border border-foreground/10 rounded-md w-80 shadow-lg p-4 gap-4 md:hidden z-40">
+        <div className="flex flex-col absolute top-16 right-4 bg-background border border-foreground/10 rounded-md w-80 shadow-lg p-4 gap-4 md:hidden z-40">
           <Link
             href="/#awesome"
             className="text-red-400 font-extrabold underline"
