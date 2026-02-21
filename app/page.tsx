@@ -2,20 +2,37 @@ import SectionsContainer from "./sections-container";
 import BulletedParagraph from "./bulleted-paragraph";
 import Image from "next/image";
 import ImageWrapper from "./image-wrapper";
+import HobbyCarousel, { type HobbySlide } from "./hobby-carousel";
+
+const HOBBY_SLIDES: HobbySlide[] = [
+  { src: "/miat.jpg", alt: "my 1992 miata", title: "my 1992 miata!" },
+  { src: "/corne.jpg", alt: "corne keyboard", title: "my mouseless corne setup" },
+  { src: "/duckies.jpg", alt: "duckies", title: "more ducks" },
+];
 
 export default function Home() {
   return (
-    <div className="flex flex-col gap-y-24 w-full items-center justify-center align-middle">
+    <div className="flex flex-col gap-y-12 w-full items-center justify-center align-middle py-32">
       <ImageWrapper
         src="/eepy_colored.png"
         alt="eepy ducky"
-        className="mb-16 mt-24"
+        className="my-16"
         width={320}
       />
+
+      <SectionsContainer heading="hiii" id="hiii">
+        <ul>
+          <li>
+            i am ryan. i like learning about anything interesting to me which
+            currently includes competitive programming, system design, and
+            ergonomic keyboards.
+          </li>
+        </ul>
+      </SectionsContainer>
       <SectionsContainer heading="career" id="career">
         <BulletedParagraph title="student @ csulb">
           <ul>
-            <li>cs, expected may 2027</li>
+            <li>cs, expected may 2027, gpa: 4.0</li>
           </ul>
         </BulletedParagraph>
 
@@ -27,13 +44,13 @@ export default function Home() {
         <BulletedParagraph title="swe intern @ htm coaching">
           <ul>
             <li>
-              this was a huge e2e project i took extreme ownership of. it was my
-              first time being responsible for handling recurring revenue ($10k
-              arr!) and payouts of that revenue to our partners. i learned a lot
-              about system design and scalable codebase patterns like mvvm. this
-              was a complete rewrite followed by a 200k+ record data migraiton
-              from the legacy app. was definitely shaking in my boots when i
-              realized how much work we had to get done.
+              this was a huge e2e project i took ownership of. it was my first
+              time being responsible for handling recurring revenue ($10k arr!)
+              and payouts of that revenue to our partners. i learned a lot about
+              system design and scalable codebase patterns like mvvm. this was a
+              complete rewrite followed by a 200k+ record data migraiton from
+              the legacy app. was definitely shaking in my boots when i realized
+              how much work we had to get done.
             </li>
           </ul>
         </BulletedParagraph>
@@ -42,9 +59,9 @@ export default function Home() {
             <li>
               did lots of ai agent work. react style agents & workflows were a
               lot of fun to learn about! flew to the uk, canada, and the bay a
-              few times to lead events. ill always look back fondly at my time
-              at fetch and am grateful for my wonderful co interns who hold me
-              accountable in my career & life.
+              few times to lead hackathons and partnership events. ill always
+              look back fondly at my time at fetch and am grateful for my
+              wonderful co interns who hold me accountable in my career & life.
             </li>
           </ul>
         </BulletedParagraph>
@@ -113,7 +130,7 @@ export default function Home() {
         </BulletedParagraph>
       </SectionsContainer>
 
-      <SectionsContainer heading="connect" id="connect">
+      <SectionsContainer heading="ssm" id="ssm">
         <BulletedParagraph title="">
           <ul>
             <li>@bagillionaire on discord</li>
@@ -138,22 +155,9 @@ export default function Home() {
           </ul>
         </BulletedParagraph>
       </SectionsContainer>
-      <SectionsContainer heading="life outside of tech" id="awesome">
-        <BulletedParagraph title="my 1992 miata!">
-          <Image src="/miat.jpg" alt="my 1992 miata" width={300} height={200} />
-        </BulletedParagraph>
 
-        <BulletedParagraph title="my mouseless corne setup">
-          <Image
-            src="/corne.jpg"
-            alt="corne keyboard"
-            width={300}
-            height={200}
-          />
-        </BulletedParagraph>
-        <BulletedParagraph title="more ducks">
-          <Image src="/duckies.jpg" alt="duckies" width={300} height={200} />
-        </BulletedParagraph>
+      <SectionsContainer heading="life outside of tech" id="awesome">
+        <HobbyCarousel slides={HOBBY_SLIDES} />
       </SectionsContainer>
     </div>
   );
