@@ -88,22 +88,6 @@ export default function HobbyCarousel({ slides }: { slides: HobbySlide[] }) {
           ))}
         </div>
       </div>
-      <div className="flex gap-4 mt-4 font-mono text-sm">
-        <button
-          onClick={scrollPrev}
-          className="opacity-70 hover:opacity-100 transition-opacity"
-          aria-label="previous slide"
-        >
-          {"<-"}
-        </button>
-        <button
-          onClick={scrollNext}
-          className="opacity-70 hover:opacity-100 transition-opacity"
-          aria-label="next slide"
-        >
-          {"->"}
-        </button>
-      </div>
     </div>
   );
 }
