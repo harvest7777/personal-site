@@ -1,43 +1,65 @@
 import SectionsContainer from "./sections-container";
 import BulletedParagraph from "./bulleted-paragraph";
 import Image from "next/image";
+import ImageWrapper from "./image-wrapper";
 
 export default function Home() {
   return (
     <div className="flex flex-col gap-y-24 w-full items-center justify-center align-middle">
-      <SectionsContainer heading="current" id="current">
-        <BulletedParagraph title="contract swe @ a coaching platform">
+      <ImageWrapper
+        src="/eepy_colored.png"
+        alt="eepy ducky"
+        className="mb-16 mt-24"
+        width={320}
+      />
+      <SectionsContainer heading="career" id="career">
+        <BulletedParagraph title="student @ csulb">
+          <ul>
+            <li>cs, expected may 2027</li>
+          </ul>
+        </BulletedParagraph>
+
+        <BulletedParagraph title="swe intern @ spacex">
+          <ul>
+            <li>incoming summer 2026 to the starlink team!!!!!</li>
+          </ul>
+        </BulletedParagraph>
+        <BulletedParagraph title="swe intern @ htm coaching">
           <ul>
             <li>
-              $10k arr (although not a billion dollars, seeing recurring revenue
-              is a first for me)
-            </li>
-            <li>rewriting a vibecoded codebase from scratch 😭 🙏</li>
-            <li>
-              payment systems, multi tenancy, modern stack w supabase nextjs
-              stripe, migrating ~200k records over
+              this was a huge e2e project i took extreme ownership of. it was my
+              first time being responsible for handling recurring revenue ($10k
+              arr!) and payouts of that revenue to our partners. i learned a lot
+              about system design and scalable codebase patterns like mvvm. this
+              was a complete rewrite followed by a 200k+ record data migraiton
+              from the legacy app. was definitely shaking in my boots when i
+              realized how much work we had to get done.
             </li>
           </ul>
         </BulletedParagraph>
         <BulletedParagraph title="swe intern @ fetch ai">
           <ul>
             <li>
-              mentoring at all the hackathons (most notable was cal hacks)
-            </li>
-            <li>
-              making agents with modern ai stack langgraph, chromadb, supabase
+              did lots of ai agent work. react style agents & workflows were a
+              lot of fun to learn about! flew to the uk, canada, and the bay a
+              few times to lead events. ill always look back fondly at my time
+              at fetch and am grateful for my wonderful co interns who hold me
+              accountable in my career & life.
             </li>
           </ul>
         </BulletedParagraph>
 
-        <BulletedParagraph title="student @ csulb">
+        <BulletedParagraph title="swe intern @ bazalu">
           <ul>
-            <li>cs, expected may 2027</li>
+            <li>
+              my first swe internship, i mainly did full stack development and
+              learned what an orm was and why they were useful.
+            </li>
           </ul>
         </BulletedParagraph>
       </SectionsContainer>
 
-      <SectionsContainer heading="accomplishments" id="accomplishments">
+      <SectionsContainer heading="wins" id="wins">
         <BulletedParagraph title="wasted 1k hours award @ leetcode">
           <ul>
             <li>
@@ -45,6 +67,7 @@ export default function Home() {
               counting...
             </li>
             <li>
+              follow 4 follow?{" "}
               <a
                 href="https://leetcode.com/u/supahsilly12345/"
                 target="_blank"
@@ -52,6 +75,14 @@ export default function Home() {
               >
                 https://leetcode.com/u/supahsilly12345/
               </a>
+            </li>
+          </ul>
+        </BulletedParagraph>
+        <BulletedParagraph title="scholarships">
+          <ul>
+            <li>
+              like $20k+ across 10 or so scholarships, i learned i enjoy writing
+              personal essays
             </li>
           </ul>
         </BulletedParagraph>
@@ -81,6 +112,7 @@ export default function Home() {
           </ul>
         </BulletedParagraph>
       </SectionsContainer>
+
       <SectionsContainer heading="connect" id="connect">
         <BulletedParagraph title="">
           <ul>

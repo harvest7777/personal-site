@@ -1,8 +1,8 @@
 @import "tailwindcss";
 
 :root {
-  --background: #202020;
-  --foreground: #dcdcdc;
+  --background: #fffff2;
+  --foreground: #131313;
 }
 
 @theme inline {
@@ -46,7 +46,6 @@ ul li {
 }
 
 ul li::before {
-  content: "-";
   position: absolute;
   left: 0;
   color: var(--foreground) / 80;
