@@ -52,13 +52,13 @@ export default function HobbyCarousel({ slides }: { slides: HobbySlide[] }) {
     <div className="w-full">
       <div ref={emblaRef} className="overflow-hidden">
         <div
-          className="flex"
+          className="flex items-center"
           style={{ touchAction: "pan-y pinch-zoom" }}
         >
           {slides.map((slide, i) => (
             <div
               key={slide.src}
-              className="flex-[0_0_70%] min-w-0 px-3"
+              className="flex-[0_0_35%] min-w-0 px-3"
             >
               <div
                 ref={(el) => { innerRefs.current[i] = el; }}
