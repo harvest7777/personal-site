@@ -41,7 +41,7 @@ h2 {
 
 ul li {
   position: relative;
-  padding-left: 1.25em;
+  /* padding-left: 1.25em; */
   margin-bottom: 0.5em;
 }
 
