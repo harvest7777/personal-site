@@ -58,11 +58,11 @@ export default function HobbyCarousel({ slides }: { slides: HobbySlide[] }) {
           {slides.map((slide, i) => (
             <div
               key={slide.src}
-              className="flex-[0_0_70%] min-w-0 px-3"
+              className="flex-[0_0_50%] min-w-0 px-2"
             >
               <div
                 ref={(el) => { innerRefs.current[i] = el; }}
-                className="origin-center will-change-transform max-w-[50%] mx-auto"
+                className="origin-center will-change-transform"
               >
                 <BulletedParagraph title={slide.title}>
                   <Image
