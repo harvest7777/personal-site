@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Tabs from "./tabs";
+import Fog from "./fog";
 
 const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
@@ -24,7 +25,10 @@ export default function RootLayout({
         className={`${geistMono.variable} antialiased flex flex-col items-center justify-center overflow-y-auto mb-96`}
       >
         {/* <Tabs></Tabs> */}
-        <main className="p-4 w-full max-w-3xl mb-12">{children}</main>
+        <main className="relative z-10 p-4 w-full max-w-3xl mb-12">
+          <Fog />
+          {children}
+        </main>
       </body>
     </html>
   );
