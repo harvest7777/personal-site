@@ -5,7 +5,9 @@ import { supabase } from "./supabase";
 
 export default function MessageForm() {
   const [message, setMessage] = useState("");
-  const [status, setStatus] = useState<"idle" | "sending" | "sent" | "error">("idle");
+  const [status, setStatus] = useState<"idle" | "sending" | "sent" | "error">(
+    "idle",
+  );
 
   async function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
@@ -27,13 +29,13 @@ export default function MessageForm() {
       <textarea
         value={message}
         onChange={(e) => setMessage(e.target.value)}
-        placeholder="leave me a message :)"
+        placeholder="all message are anonymous"
         rows={3}
-        className="resize-none bg-transparent border border-current rounded p-2 text-sm w-full"
+        className="resize-none bg-transparent border border-foreground/20 p-2 text-sm w-full"
       />
       <button
         type="submit"
-        disabled={status === "sending"}
+        disabled={status === "sending" || !message}
         className="self-start text-sm underline underline-offset-2 disabled:opacity-50"
       >
         {status === "sending" ? "sending..." : "send"}
