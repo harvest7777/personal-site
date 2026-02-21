@@ -3,6 +3,7 @@ import BulletedParagraph from "./bulleted-paragraph";
 import Image from "next/image";
 import ImageWrapper from "./image-wrapper";
 import HobbyCarousel, { type HobbySlide } from "./hobby-carousel";
+import MessageForm from "./message-form";
 
 const HOBBY_SLIDES: HobbySlide[] = [
   { src: "/miat.jpg", alt: "my 1992 miata", title: "my 1992 miata!" },
@@ -158,6 +159,10 @@ export default function Home() {
 
       <SectionsContainer heading="life outside of tech" id="awesome">
         <HobbyCarousel slides={HOBBY_SLIDES} />
+      </SectionsContainer>
+
+      <SectionsContainer heading="say something" id="say-something">
+        <MessageForm />
       </SectionsContainer>
     </div>
   );
