@@ -32,7 +32,7 @@ export default function Home() {
             <Link href="https://open.spotify.com/track/2TmqHjg7uhizGndzXQdFuf?si=3f1d056966284a1e" className="underline">talk 2 me</Link>{" "}about ducks, ergonomic keyboards, old japanese cars, programming, and philosphy :D
           </li>
           <li>
-            have a hard problem and want a new addition to your team?
+            have a hard problem?
             <br></br>
             <Link href="mailto:ryan.tran7312@gmail.com" className="underline">email me</Link>
           </li>
