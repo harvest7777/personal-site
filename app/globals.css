@@ -32,7 +32,7 @@ ul {
 }
 
 h1 {
-  @apply text-xl font-bold;
+  @apply text-lg font-bold;
 }
 
 h2 {
@@ -50,4 +50,9 @@ ul li::before {
   left: 0;
   color: var(--foreground) / 80;
   font-weight: bold;
+}
+
+a {
+  text-decoration-thickness: 2px;
+  text-underline-offset: 3px;
 }

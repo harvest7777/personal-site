@@ -4,10 +4,15 @@ import Image from "next/image";
 import ImageWrapper from "./image-wrapper";
 import HobbyCarousel, { type HobbySlide } from "./hobby-carousel";
 import MessageForm from "./message-form";
+import Link from "next/link";
 
 const HOBBY_SLIDES: HobbySlide[] = [
   { src: "/miat.jpg", alt: "my 1992 miata", title: "my 1992 miata!" },
-  { src: "/corne.jpg", alt: "corne keyboard", title: "my mouseless corne setup" },
+  {
+    src: "/corne.jpg",
+    alt: "corne keyboard",
+    title: "my mouseless corne setup",
+  },
   { src: "/duckies.jpg", alt: "duckies", title: "more ducks" },
 ];
 
@@ -21,149 +26,113 @@ export default function Home() {
         width={320}
       />
 
-      <SectionsContainer heading="hiii" id="hiii">
+      <SectionsContainer heading="ryan tran" id="ryan tran">
         <ul>
           <li>
-            i am ryan. i like learning about anything interesting to me which
-            currently includes competitive programming, system design, and
-            ergonomic keyboards.
+            <Link href="https://open.spotify.com/track/2TmqHjg7uhizGndzXQdFuf?si=3f1d056966284a1e" className="underline">talk 2 me</Link>{" "}about ducks, ergonomic keyboards, old japanese cars, programming, and philosphy :D
+          </li>
+          <li>
+            have a hard problem and want a new addition to your team?
+            <br></br>
+            <Link href="mailto:ryan.tran7312@gmail.com" className="underline">email me</Link>
           </li>
         </ul>
       </SectionsContainer>
-      <SectionsContainer heading="career" id="career">
-        <BulletedParagraph title="student @ csulb">
+
+      <SectionsContainer heading="work" id="work">
+        <BulletedParagraph title={<>swe intern @ <Link href="https://www.spacex.com" target="_blank" rel="noopener noreferrer" className="underline">spacex</Link></>}>
           <ul>
-            <li>cs, expected may 2027, gpa: 4.0</li>
+            <li>summer 2026 starlink team</li>
           </ul>
         </BulletedParagraph>
-
-        <BulletedParagraph title="swe intern @ spacex">
+        <BulletedParagraph title={<>undergrad researcher @ <Link href="https://www.csulb.edu" target="_blank" rel="noopener noreferrer" className="underline">csulb</Link></>}>
           <ul>
-            <li>incoming summer 2026 to the starlink team!!!!!</li>
+            <li>
+              author, simulation development, llm training and evaluation
+            </li>
           </ul>
         </BulletedParagraph>
         <BulletedParagraph title="swe intern @ htm coaching">
           <ul>
             <li>
-              this was a huge e2e project i took ownership of. it was my first
-              time being responsible for handling recurring revenue ($10k arr!)
-              and payouts of that revenue to our partners. i learned a lot about
-              system design and scalable codebase patterns like mvvm. this was a
-              complete rewrite followed by a 200k+ record data migraiton from
-              the legacy app. was definitely shaking in my boots when i realized
-              how much work we had to get done.
+              dev, payments, cicd, project planning, talking with stakeholders
             </li>
           </ul>
         </BulletedParagraph>
-        <BulletedParagraph title="swe intern @ fetch ai">
+        <BulletedParagraph title={<>swe intern @ <Link href="https://fetch.ai" target="_blank" rel="noopener noreferrer" className="underline">fetch ai</Link></>}>
           <ul>
             <li>
-              did lots of ai agent work. react style agents & workflows were a
-              lot of fun to learn about! flew to the uk, canada, and the bay a
-              few times to lead hackathons and partnership events. ill always
-              look back fondly at my time at fetch and am grateful for my
-              wonderful co interns who hold me accountable in my career & life.
+              ai agent development, observability, testability, cost cutting
             </li>
           </ul>
         </BulletedParagraph>
 
-        <BulletedParagraph title="swe intern @ bazalu">
+        <BulletedParagraph title={<>swe intern @ <Link href="https://bazalu.com" target="_blank" rel="noopener noreferrer" className="underline">bazalu</Link></>}>
           <ul>
             <li>
-              my first swe internship, i mainly did full stack development and
-              learned what an orm was and why they were useful.
+              full stack dev, worked side by side with founding team to implement anything we envisioned
             </li>
           </ul>
         </BulletedParagraph>
+      </SectionsContainer>
+      <SectionsContainer heading="school" id="career">
+        <BulletedParagraph title="cs @ csulb">
+          <ul>
+            <li>expected may 2027</li>
+            <li>gpa: 4</li>
+          </ul>
+        </BulletedParagraph>
+
+        <BulletedParagraph title="nhs">
+          <ul>
+            <li>gpa: 4.45</li>
+            <li>uwgpa: 4</li>
+          </ul>
+        </BulletedParagraph>
+
       </SectionsContainer>
 
       <SectionsContainer heading="wins" id="wins">
-        <BulletedParagraph title="wasted 1k hours award @ leetcode">
+        <BulletedParagraph title="startnow">
           <ul>
             <li>
-              sunk 1k hours of my life to solve over 680 problems and
-              counting...
-            </li>
-            <li>
-              follow 4 follow?{" "}
-              <a
-                href="https://leetcode.com/u/supahsilly12345/"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                https://leetcode.com/u/supahsilly12345/
-              </a>
-            </li>
-          </ul>
-        </BulletedParagraph>
-        <BulletedParagraph title="scholarships">
-          <ul>
-            <li>
-              like $20k+ across 10 or so scholarships, i learned i enjoy writing
-              personal essays
-            </li>
-          </ul>
-        </BulletedParagraph>
-        <BulletedParagraph title="1st place @ la hacks">
-          <ul>
-            <li>
-              won $2.5k for ai track, 2k competitors, debugged a lot of cursor
-              code
+              1st @ la hacks 2025
             </li>
           </ul>
         </BulletedParagraph>
 
-        <BulletedParagraph title="1st place @ csulb hackathon">
+        <BulletedParagraph title="communal pet duck">
           <ul>
             <li>
-              made a multiplayer ducky game with fun stack aws, docker,
-              socket.io
+              1st @ marinahacks 2024
             </li>
           </ul>
         </BulletedParagraph>
 
-        <BulletedParagraph title="1st place @ very small hackathon">
+        <BulletedParagraph title="pictochat">
           <ul>
             <li>
-              made a chatting app with simple full stack react, flask, socket.io
+              1st @ marinahacks 2023
+            </li>
+          </ul>
+        </BulletedParagraph>
+
+        <BulletedParagraph title="10 scholarships">
+          <ul>
+            <li>
+              $20k
             </li>
           </ul>
         </BulletedParagraph>
       </SectionsContainer>
 
-      <SectionsContainer heading="ssm" id="ssm">
-        <BulletedParagraph title="">
-          <ul>
-            <li>@bagillionaire on discord</li>
-            <li>
-              <a
-                href="https://www.linkedin.com/in/wisp/"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                https://www.linkedin.com/in/wisp/
-              </a>
-            </li>
-            <li>
-              <a
-                href="https://github.com/harvest7777"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                https://github.com/harvest7777
-              </a>
-            </li>
-          </ul>
-        </BulletedParagraph>
-      </SectionsContainer>
-
-      <SectionsContainer heading="life outside of tech" id="awesome">
+<SectionsContainer heading="non-tech" id="awesome">
         <HobbyCarousel slides={HOBBY_SLIDES} />
       </SectionsContainer>
 
-      <SectionsContainer heading="say something" id="say-something">
-        <MessageForm />
-      </SectionsContainer>
+      {/*<SectionsContainer heading="say something" id="say-something">*/}
+      {/*  <MessageForm />*/}
+      {/*</SectionsContainer>*/}
     </div>
   );
 }

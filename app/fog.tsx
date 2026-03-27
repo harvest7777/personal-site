@@ -7,7 +7,7 @@ export default function Fog() {
       aria-hidden
       style={{
         background:
-          "linear-gradient(to top, rgba(255,255,255,0.9) 0%, rgba(255,255,255,0.4) 20%, transparent 60%)",
+          "linear-gradient(to top, rgba(255,255,255,0.9) 0%, rgba(255,255,255,0.4) 10%, transparent 60%)",
       }}
     />
   );
