@@ -48,7 +48,7 @@ export default function Home() {
         <BulletedParagraph title={<>undergrad researcher @ <Link href="https://www.csulb.edu" target="_blank" rel="noopener noreferrer" className="underline">csulb</Link></>}>
           <ul>
             <li>
-              author, simulation development, llm training and evaluation
+              author, simulation development, model training and evaluation
             </li>
           </ul>
         </BulletedParagraph>
